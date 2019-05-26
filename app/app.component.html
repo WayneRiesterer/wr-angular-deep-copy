@@ -1,0 +1,21 @@
+<div class="container">
+	<h1>Deep Copy using Lodash</h1>
+	<hr>
+
+	<div class="row">
+		<div class="col-6">
+			<h2>Original</h2>
+			<app-person *ngFor="let person of people" [person]="person"></app-person>
+		</div>
+		<div class="col-6">
+			<h2>Copy & Edit</h2>
+			<app-person *ngFor="let person of people2" [person]="person"></app-person>
+		</div>
+	</div>
+  <div class="row">
+    <div class="col-12">
+      <p><strong>Moral of the story:</strong> It really is a copy :)</p>
+      <p>Other means of trying to achieve this will create a new reference for the array, but then copy the original object references into the new array. This means that any changes to the copied objects will be reflected in the originals; as they are sharing the same references.</p>
+    </div>
+  </div>
+</div>
